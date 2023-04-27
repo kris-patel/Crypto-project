@@ -1,0 +1,19 @@
+{% extends "poll/base.html" %} {% block title %}Result Page{% endblock %} {% block content %}
+<h2 class="text-center">Votes</h2>
+<table class="table table-bordered table-sm text-center">
+  <thead>
+    <tr>
+      <th>Ring Signature</th>
+      <th>Vote Given to</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in obj %}
+    <tr>
+      <td>{{ i.ring }}</td>
+      <td>{{ i.vote_to }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
